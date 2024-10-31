@@ -1,4 +1,5 @@
 export type Color = {
+  gray: string;
   lightGray: string;
   regularText: string;
   primaryText: string;
@@ -33,8 +34,9 @@ export type Color = {
 };
 
 const color: Color = {
+  gray: "#383838",
   lightGray: "#F5F5F5",
-  regularText: "#8F8F8F",
+  regularText: "#4a4a4a",
   primaryText: "#1F1F1F",
   linearBorder: "rgba(149, 143, 159, 0.00)",
   secondaryFont: "#8F8F8F",
@@ -54,7 +56,7 @@ const color: Color = {
   sliderColor: "#005841",
   readyText: "#065C46",
   notificationColor: "#F2F2F2",
-  border: "#E9E9E9",
+  border: "#000000e6",
   categoryTitle: "#8CCBBA",
   activeColor: "#3F8FDA",
   completeColor: "#FFB400",

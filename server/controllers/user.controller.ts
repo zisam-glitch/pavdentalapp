@@ -10,7 +10,7 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken, {
   lazyLoading: true,
 });
-
+console.log(accountSid)
 // register new user
 export const registerUser = async (
   req: Request,
@@ -21,7 +21,7 @@ export const registerUser = async (
     const { phone_number } = req.body;
     try {
       await client.verify.v2
-        ?.services(process.env.TWILIO_SERVICE_SID!)
+        ?.services("VAdbc827775397e2be86fd51471406ec65")
         .verifications.create({
           channel: "sms",
           to: phone_number,

@@ -7,20 +7,29 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   flex: {
-    flex: 1
+    flex: 1,
   },
   countryCodeContainer: {
-    width: windowWidth(69),
+    width: windowWidth(80),
+    height: windowHeight(30),
+    backgroundColor: color.whiteColor,
+    borderRadius: 0,
+    justifyContent: "center",
+    alignContent: "center",
+    paddingHorizontal: windowHeight(7),
+    paddingVertical: windowHeight(0),
+    borderBottomWidth: 1,
+    borderColor: color.border,
   },
   phoneNumberInput: {
     width: windowWidth(326),
-    height: windowHeight(39),
+    height: windowHeight(30),
     backgroundColor: color.whiteColor,
-    borderRadius: 4,
-    marginHorizontal: windowHeight(9),
+    borderRadius: 0,
+    marginLeft: windowHeight(9),
     justifyContent: "center",
-    paddingHorizontal: windowHeight(9),
-    borderWidth: 1,
+    paddingHorizontal: windowHeight(1),
+    borderBottomWidth: 1,
     borderColor: color.border,
   },
   rememberMeText: {
@@ -58,7 +67,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "flex-start",
-
     backgroundColor: color.whiteColor,
   },
   containerview: {
@@ -71,22 +79,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     alignItems: "center",
   },
-  topBar: {
-    flexDirection: "row",
-    gap: 34,
-    padding: 16,
-    borderBottomWidth: 3,
-    borderBottomColor: "#00000029",
-  },
-  backButton: {
-    paddingTop: 3.5,
-  },
-  topBarTitle: {
-    flex: 1,
-    fontSize: 18,
-    fontFamily: fonts.medium,
-    paddingBottom: 1,
-  },
+ 
 });
 
 export default styles;

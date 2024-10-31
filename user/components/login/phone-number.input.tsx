@@ -17,24 +17,22 @@ interface Props {
 }
 
 export default function PhoneNumberInput({
+   
   width,
   phone_number,
   setphone_number,
   countryCode,
   setCountryCode,
 }: Props) {
+
   return (
     <View>
-      <Text
-        style={[commonStyles.mediumTextBlack, { marginTop: windowHeight(8) }]}
-      >
-        Phone Number
-      </Text>
+    
       <View
         style={[
           external.fd_row,
           external.ai_center,
-          external.mt_5,
+          external.mt_16,
           { flexDirection: "row" },
         ]}
       >
@@ -47,8 +45,8 @@ export default function PhoneNumberInput({
           ]}
         >
           <SelectInput
-            title="+880"
-            placeholder="Select your country"
+            title=""
+            placeholder={countryCode}
             value={countryCode}
             onValueChange={(text) => setCountryCode(text)}
             showWarning={false}
@@ -66,9 +64,9 @@ export default function PhoneNumberInput({
           ]}
         >
           <TextInput
-            style={[commonStyles.regularText]}
+            style={[commonStyles.regularNumberText]}
             placeholderTextColor={color.subtitle}
-            placeholder={"Enter your number"}
+            placeholder={"Phone Number"}
             keyboardType="numeric"
             value={phone_number}
             onChangeText={setphone_number}

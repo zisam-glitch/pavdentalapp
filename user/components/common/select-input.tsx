@@ -9,7 +9,7 @@ import RNPickerSelect from "react-native-picker-select";
 interface InputProps {
   title: string;
   placeholder: string;
-  items: { label: string; value: string }[];
+  items: { label: string; value: string; name:string }[];
   value?: string;
   warning?: string;
   onValueChange: (value: string) => void;
@@ -26,29 +26,39 @@ export default function SelectInput({
   showWarning,
 }: InputProps) {
   const { colors } = useTheme();
+
+
+
   return (
     <View>
-      {/* <Text style={[styles.title, { color: colors.text }]}>{title}</Text> */}
       <RNPickerSelect
         onValueChange={onValueChange}
         items={items}
-        placeholder={{ label: value }}
+        placeholder={{
+          label: placeholder,
+          color: color.subtitle,
+        }}
+        
         style={{
           inputIOS: {
             ...styles.input,
-            backgroundColor: color.lightGray,
-            borderColor: colors.border,
             height: windowHeight(39),
+            color: color.gray
           },
           inputAndroid: {
             ...styles.input,
-            backgroundColor: color.lightGray,
-            borderColor: colors.border,
             height: windowHeight(39),
-            color: "#000",
+            color: color.gray
+         
           },
+          iconContainer: {
+            display: 'none',
+          },
+          
+         
         }}
         value={value}
+        useNativeAndroidPickerStyle={false} 
       />
       {showWarning && <Text style={[styles.warning]}>{warning}</Text>}
     </View>
@@ -62,12 +72,13 @@ const styles = StyleSheet.create({
     marginVertical: windowHeight(8),
   },
   input: {
-    borderRadius: 5,
-    borderWidth: 1,
-    marginBottom: 5,
+    borderRadius: 0,
+    borderWidth: 0,
+    marginBottom: 0,
+    fontSize:  windowWidth(19),
     height: windowHeight(30),
-    color: color.secondaryFont,
-    paddingHorizontal: 10,
+    color: color.subtitle,
+    paddingHorizontal: 8,
   },
   warning: {
     color: color.red,

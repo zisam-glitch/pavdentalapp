@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 import appFonts from '../themes/app.fonts';
 import color from '../themes/app.colors';
-import { fontSizes, windowHeight } from '../themes/app.constant';
+import { fontSizes, windowHeight, windowWidth } from "@/themes/app.constant";
 import { external } from './external.style';
 
 const commonStyles = StyleSheet.create({
@@ -10,6 +10,18 @@ const commonStyles = StyleSheet.create({
     fontSize: fontSizes.FONT17,
     color: color.regularText,
     fontWeight: '400',
+  },
+
+  regularNumberText: {
+    fontSize: fontSizes.FONT19,
+    color: color.gray,
+  }, 
+
+  regularTextBlack: {
+    fontFamily: appFonts.regular,
+    fontSize: fontSizes.FONT17,
+    color: color.blackColor,
+    lineHeight: 22
   },
   regularTextBigBlack: {
     fontFamily: appFonts.semiBold,
@@ -60,6 +72,13 @@ const commonStyles = StyleSheet.create({
     shadowOpacity: 0.18,
     shadowRadius: 1.0,
     elevation: 1,
+  },
+  transformLine: {
+    transform: [{ rotate: "-90deg" }],
+    height: windowHeight(50),
+    width: windowWidth(120),
+    left: windowWidth(-50),
+   
   },
 });
 export { commonStyles };

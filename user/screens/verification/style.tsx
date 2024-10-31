@@ -23,6 +23,23 @@ const style = StyleSheet.create({
     fontFamily: fonts.bold,
     paddingHorizontal: 5,
   },
+  container: {
+    flex: 1,
+    justifyContent: "flex-start",
+    backgroundColor: color.whiteColor,
+  },
+  flex: {
+    flex: 1,
+  },
+  containerview: {
+    flex: 1,
+    justifyContent: "space-between",
+    paddingHorizontal: windowHeight(12),
+    paddingTop: windowHeight(12),
+    paddingBottom: windowHeight(16),
+  },
 });
+
+
 
 export { style };
